@@ -1,0 +1,34 @@
+syntax = 'proto3';
+
+package product;
+
+service ProductService {
+  rpc GetById(GetProductByIdRequest) returns (ProductPayload) {}
+  rpc CreateProduct(CreateProductRequest) returns (ProductPayload) {}
+}
+
+message CreateProductRequest {
+  string name = 2;
+  double price = 3;
+  int32 unitsAvailable = 4;
+  string imageUrl = 5;
+  repeated int64 categoriesId = 6;
+}
+
+message GetProductByIdRequest {
+  int64 id = 1;
+}
+
+message ProductCategoryPayload {
+  int64 id = 1;
+  string name = 2;
+}
+
+message ProductPayload {
+  int64 id = 1;
+  string name = 2;
+  double price = 3;
+  int32 unitsAvailable = 4;
+  string imageUrl = 5;
+  repeated ProductCategoryPayload categories = 6;
+}
