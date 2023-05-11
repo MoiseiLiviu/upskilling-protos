@@ -14,7 +14,7 @@ message GetAllCategoriesResponse {
 }
 
 message CategoryPayload {
-  int32 id = 1
+  int32 id = 1;
   string name = 2;
   string description = 3;
 }
