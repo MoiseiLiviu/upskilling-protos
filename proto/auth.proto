@@ -6,8 +6,8 @@ service AuthService {
   rpc RegisterUser (RegisterUserInput) returns (RegistrationResponse) {}
   rpc LoginUser (LoginInput) returns (LoginResponse) {}
   rpc Refresh (RefreshRequest) returns (RefreshResponse) {}
-  rpc logout (LogoutRequest) returns (LogoutResponse) {}
-  rpc validate(ValidateRequest) returns (ValidateResponse) {}
+  rpc Logout (LogoutRequest) returns (LogoutResponse) {}
+  rpc Validate(ValidateRequest) returns (ValidateResponse) {}
 }
 
 message RegistrationResponse {
