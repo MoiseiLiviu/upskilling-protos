@@ -4,7 +4,7 @@ package category;
 
 service CategoryService {
   rpc CreateCategory(CreateCategoryRequest) returns (CreateCategoryResponse) {}
-  rpc GetAll(GetAllCategoriesRequest) returns (CategoryPayload) {}
+  rpc GetAll(GetAllCategoriesRequest) returns (GetAllCategoriesResponse) {}
 }
 
 message GetAllCategoriesRequest {}
