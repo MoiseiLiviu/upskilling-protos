@@ -16,7 +16,7 @@ message RegistrationResponse {
 message LogoutRequest {}
 
 message LogoutResponse {
-  string logoutCookie = 1;
+  repeated string logoutCookie = 1;
 }
 
 message LoginResponse {
