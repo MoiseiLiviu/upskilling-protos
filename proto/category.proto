@@ -9,6 +9,10 @@ service CategoryService {
 
 message GetAllCategoriesRequest {}
 
+message GetAllCategoriesResponse {
+  repeated CategoryPayload categories = 1;
+}
+
 message CategoryPayload {
   string name = 1;
   string description = 2;
