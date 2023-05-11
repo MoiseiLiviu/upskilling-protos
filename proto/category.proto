@@ -26,5 +26,5 @@ message CreateCategoryRequest {
 message CreateCategoryResponse {
   int32 status = 1;
   string error = 2;
-  string categoryId = 3;
+  int32 categoryId = 3;
 }
