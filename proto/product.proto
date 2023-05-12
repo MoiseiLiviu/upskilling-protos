@@ -12,20 +12,21 @@ message CreateProductRequest {
   double price = 3;
   int32 unitsAvailable = 4;
   string imageUrl = 5;
-  repeated int64 categoriesId = 6;
+  int32 userId = 6;
+  repeated int32 categoriesId = 7;
 }
 
 message GetProductByIdRequest {
-  int64 id = 1;
+  int32 id = 1;
 }
 
 message ProductCategoryPayload {
-  int64 id = 1;
+  int32 id = 1;
   string name = 2;
 }
 
 message ProductPayload {
-  int64 id = 1;
+  int32 id = 1;
   string name = 2;
   double price = 3;
   int32 unitsAvailable = 4;
