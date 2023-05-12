@@ -45,7 +45,9 @@ message UpdateItemQuantityRequest {
   int32 newQuantity = 3;
 }
 
-message ClearCartRequest {}
+message ClearCartRequest {
+  int32 userId = 1;
+}
 
 message RemoveItemRequest {
   int32 productId = 1;
