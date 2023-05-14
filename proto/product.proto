@@ -5,6 +5,16 @@ package product;
 service ProductService {
   rpc GetById(GetProductByIdRequest) returns (ProductPayload) {}
   rpc CreateProduct(CreateProductRequest) returns (ProductPayload) {}
+  rpc CheckProductAvailability(CheckProductAvailabilityRequest) returns (CheckProductAvailabilityResponse) {}
+}
+
+message CheckProductAvailabilityResponse {
+  bool isAvailable = 1;
+}
+
+message CheckProductAvailabilityRequest {
+  int32 productId = 1;
+  int32 quantity = 2;
 }
 
 message CreateProductRequest {
