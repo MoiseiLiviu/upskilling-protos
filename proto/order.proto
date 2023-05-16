@@ -1,0 +1,21 @@
+syntax = 'proto3';
+
+package order;
+
+service OrderService {
+  rpc InitOrder(InitOrderRequest) returns (InitOrderResponse) {}
+}
+
+message InitOrderRequest {
+  int32 userId = 1;
+  repeated CartItemPayload items = 2;
+}
+
+message InitOrderResponse {
+  int32 orderId = 1;
+}
+
+message CartItemPayload {
+  int32 productId = 1;
+  int32 quantity = 2;
+}
