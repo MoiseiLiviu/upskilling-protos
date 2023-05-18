@@ -4,6 +4,22 @@ package order;
 
 service OrderService {
   rpc InitOrder(InitOrderRequest) returns (InitOrderResponse) {}
+  rpc GetOrderStatus(GetOrderStatusRequest) returns (GetOrderStatusResponse) {}
+}
+
+message GetOrderStatusRequest {
+  int32 orderId = 1;
+}
+
+message GetOrderStatusResponse {
+  OrderStatus status = 1;
+}
+
+enum OrderStatus {
+  UNKNOWN = 0;
+  CREATED = 1;
+  APPROVED = 2;
+  PAID = 3;
 }
 
 message InitOrderRequest {
