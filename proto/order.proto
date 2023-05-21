@@ -20,6 +20,8 @@ enum OrderStatus {
   CREATED = 1;
   APPROVED = 2;
   PAID = 3;
+  PAYMENT_FAILED = 4;
+  ITEMS_REJECTED = 5;
 }
 
 message InitOrderRequest {
