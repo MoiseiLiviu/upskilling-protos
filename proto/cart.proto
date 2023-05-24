@@ -8,6 +8,15 @@ service CartService {
   rpc ClearCart(ClearCartRequest) returns (CartItemOperationResponse) {}
   rpc UpdateItemQuantity(UpdateItemQuantityRequest) returns (CartItemOperationResponse) {}
   rpc RemoveItem(RemoveItemRequest) returns (CartItemOperationResponse) {}
+  rpc InitOrder(InitOrderRequest) returns (InitOrderResponse) {}
+}
+
+message InitOrderRequest {
+  int32 userId = 1;
+}
+
+message InitOrderResponse {
+  int32 orderId = 1;
 }
 
 message CartItemOperationResponse {
